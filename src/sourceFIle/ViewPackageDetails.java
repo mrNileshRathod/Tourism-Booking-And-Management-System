@@ -100,6 +100,8 @@ public class ViewPackageDetails extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         totPerson = new javax.swing.JTextField();
         PhoneNo = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1350, 840));
@@ -134,9 +136,10 @@ public class ViewPackageDetails extends javax.swing.JFrame {
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/bookedDetails.jpeg"))); // NOI18N
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 90, 730, 710));
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
-        jLabel5.setText("Tour ID");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, -1, -1));
+        jLabel5.setFont(new java.awt.Font("Magneto", 0, 50)); // NOI18N
+        jLabel5.setForeground(java.awt.Color.red);
+        jLabel5.setText("Thank You !");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 700, 410, 60));
 
         tid.setEditable(false);
         tid.setBackground(new java.awt.Color(204, 204, 204));
@@ -211,6 +214,13 @@ public class ViewPackageDetails extends javax.swing.JFrame {
         PhoneNo.setCaretColor(new java.awt.Color(51, 51, 51));
         getContentPane().add(PhoneNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 320, 251, 40));
 
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jLabel6.setText("Tour ID");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, -1, -1));
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/simile.png"))); // NOI18N
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 660, -1, -1));
+
         setBounds(500, 150, 1350, 840);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -263,8 +273,10 @@ public class ViewPackageDetails extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField price;
     private javax.swing.JTextField tid;
     private javax.swing.JPanel toppanel;

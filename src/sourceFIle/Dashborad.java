@@ -67,7 +67,6 @@ public class Dashborad extends javax.swing.JFrame {
         ViewPackageDetail = new javax.swing.JButton();
         MorePanel = new javax.swing.JPanel();
         Logout = new javax.swing.JButton();
-        AboutUs = new javax.swing.JButton();
         MainMenu = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -221,15 +220,7 @@ public class Dashborad extends javax.swing.JFrame {
         });
         MorePanel.add(Logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 340, 50));
 
-        AboutUs.setBackground(new java.awt.Color(58, 83, 155));
-        AboutUs.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        AboutUs.setForeground(new java.awt.Color(255, 255, 255));
-        AboutUs.setText("About Us");
-        AboutUs.setActionCommand("CheckDetails");
-        AboutUs.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        MorePanel.add(AboutUs, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 340, 50));
-
-        jPanel2.add(MorePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 720, 380, 190));
+        jPanel2.add(MorePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 720, 380, 140));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 70, -1, 970));
 
@@ -315,7 +306,6 @@ public class Dashborad extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton AboutUs;
     private javax.swing.JButton AddPersonalDetail;
     private javax.swing.JButton BookPackage;
     public static javax.swing.JLabel LoginUserName;
