@@ -179,7 +179,7 @@ public class PackageDetails extends javax.swing.JFrame {
 
         jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/package3.jpg"))); // NOI18N
         jLabel23.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        jPanel2.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 40, 710, 500));
+        jPanel2.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 40, 720, 500));
 
         jLabel24.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel24.setForeground(java.awt.Color.red);

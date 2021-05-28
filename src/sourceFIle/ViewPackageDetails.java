@@ -50,7 +50,7 @@ public class ViewPackageDetails extends javax.swing.JFrame {
             pst.setString(1, tid.getText());
             ResultSet rs = pst.executeQuery();
             while(rs.next()){
-                PhoneNo.setText(rs.getString(1));
+                SelectPackage.setText(rs.getString(1));
             }
         }
         catch(ClassNotFoundException | SQLException  ex){
@@ -59,15 +59,16 @@ public class ViewPackageDetails extends javax.swing.JFrame {
     }
     private void getPackageInfo(){
         try{
-            String sql = "SELECT PackageName,TotalPerson,PackagePrice FROM bookingdata WHERE TourId = ?";
+            String sql = "SELECT PhoneNo,PackageName,TotalPerson,PackagePrice FROM bookingdata WHERE TourId = ?";
             con = db.Connect.getConnection();
             pst = con.prepareStatement(sql);
             pst.setString(1, tid.getText());
             ResultSet rs = pst.executeQuery();
             while(rs.next()){
-                SelectPackage.setSelectedItem(rs.getString(1));
-                totPerson.setText(rs.getString(2));
-                price.setText(rs.getString(3));
+                PhoneNo.setText(rs.getString(1));
+                SelectPackage.setText(rs.getString(2));
+                totPerson.setText(rs.getString(3));
+                price.setText(rs.getString(4));
             }
         }
         catch(ClassNotFoundException | SQLException  ex){
@@ -91,14 +92,14 @@ public class ViewPackageDetails extends javax.swing.JFrame {
         tid = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         userid = new javax.swing.JTextField();
-        PhoneNo = new javax.swing.JTextField();
+        SelectPackage = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        SelectPackage = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         price = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         totPerson = new javax.swing.JTextField();
+        PhoneNo = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1350, 840));
@@ -131,7 +132,7 @@ public class ViewPackageDetails extends javax.swing.JFrame {
         getContentPane().add(toppanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1350, 70));
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/bookedDetails.jpeg"))); // NOI18N
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 90, 730, 680));
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 90, 730, 710));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jLabel5.setText("Tour ID");
@@ -158,23 +159,18 @@ public class ViewPackageDetails extends javax.swing.JFrame {
         userid.setCaretColor(new java.awt.Color(51, 51, 51));
         getContentPane().add(userid, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, 251, 40));
 
-        PhoneNo.setEditable(false);
-        PhoneNo.setBackground(new java.awt.Color(204, 204, 204));
-        PhoneNo.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
-        PhoneNo.setForeground(new java.awt.Color(51, 51, 51));
-        PhoneNo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        PhoneNo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        PhoneNo.setCaretColor(new java.awt.Color(51, 51, 51));
-        getContentPane().add(PhoneNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 320, 251, 40));
+        SelectPackage.setEditable(false);
+        SelectPackage.setBackground(new java.awt.Color(204, 204, 204));
+        SelectPackage.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
+        SelectPackage.setForeground(new java.awt.Color(51, 51, 51));
+        SelectPackage.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        SelectPackage.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        SelectPackage.setCaretColor(new java.awt.Color(51, 51, 51));
+        getContentPane().add(SelectPackage, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 390, 251, 40));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jLabel3.setText("Select Package");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 400, -1, -1));
-
-        SelectPackage.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
-        SelectPackage.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "Platinum", "Gold", "Silver" }));
-        SelectPackage.setEnabled(false);
-        getContentPane().add(SelectPackage, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 390, 250, 40));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jLabel4.setText("Total Persons");
@@ -205,6 +201,15 @@ public class ViewPackageDetails extends javax.swing.JFrame {
         totPerson.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         totPerson.setCaretColor(new java.awt.Color(51, 51, 51));
         getContentPane().add(totPerson, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 460, 251, 40));
+
+        PhoneNo.setEditable(false);
+        PhoneNo.setBackground(new java.awt.Color(204, 204, 204));
+        PhoneNo.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
+        PhoneNo.setForeground(new java.awt.Color(51, 51, 51));
+        PhoneNo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        PhoneNo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        PhoneNo.setCaretColor(new java.awt.Color(51, 51, 51));
+        getContentPane().add(PhoneNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 320, 251, 40));
 
         setBounds(500, 150, 1350, 840);
     }// </editor-fold>//GEN-END:initComponents
@@ -250,7 +255,7 @@ public class ViewPackageDetails extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField PhoneNo;
-    private javax.swing.JComboBox<String> SelectPackage;
+    private javax.swing.JTextField SelectPackage;
     private javax.swing.JLabel cloase;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;

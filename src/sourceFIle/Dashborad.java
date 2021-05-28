@@ -276,7 +276,7 @@ public class Dashborad extends javax.swing.JFrame {
 
     private void BookPackageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BookPackageActionPerformed
        user = LoginUserName.getText();
-       new Book(user).setVisible(true);
+       new BookPackage(user).setVisible(true);
     }//GEN-LAST:event_BookPackageActionPerformed
 
     /**
