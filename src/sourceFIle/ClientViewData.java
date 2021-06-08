@@ -108,11 +108,12 @@ import javax.swing.JOptionPane;
         pasword = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         userid = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Client View Date");
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(1350, 840));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         toppanel.setBackground(new java.awt.Color(9, 84, 127));
@@ -273,6 +274,17 @@ import javax.swing.JOptionPane;
 
         getContentPane().add(UserLoginPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 170, 520, 300));
 
+        jLabel11.setBackground(new java.awt.Color(153, 153, 153));
+        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/simile.png"))); // NOI18N
+        jLabel11.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 550, -1, -1));
+
+        jLabel12.setFont(new java.awt.Font("Magneto", 0, 50)); // NOI18N
+        jLabel12.setForeground(java.awt.Color.darkGray);
+        jLabel12.setText("Thank You !");
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 590, 340, 60));
+
         setBounds(500, 150, 1350, 840);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -329,6 +341,8 @@ import javax.swing.JOptionPane;
     private javax.swing.JRadioButton female;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
